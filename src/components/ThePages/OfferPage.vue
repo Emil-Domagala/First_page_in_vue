@@ -1,12 +1,13 @@
 <template>
-offer
+	<div class="map">
+
+	</div>
 </template>
 
-<script>
-export default{
-
-}</script>
-
 <style scoped>
-
-</style> 
+.map {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+}
+</style>

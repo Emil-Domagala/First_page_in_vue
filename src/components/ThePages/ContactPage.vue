@@ -29,17 +29,16 @@
 				</div>
 				<button>Wyślij!</button>
 			</form>
-			<div class="mapouter">
-				<div class="gmap_canvas">
-					<iframe
-						id="gmap_canvas"
-						src="https://maps.google.com/maps?q=ul.%20Jasnog%C3%B3rskiej%202,%20Krak%C3%B3w&t=&z=15&ie=UTF8&iwloc=&output=embed"
-						frameborder="0"
-						scrolling="no"
-						marginheight="0"
-						marginwidth="0"
-					></iframe>
-				</div>
+			<div class="map">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.8978424941183!2d19.892849199999997!3d50.088199499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a2d7f0d587f%3A0x15f4e7c36adff6d2!2sJasnog%C3%B3rska%202%2C%2031-358%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1674679360212!5m2!1spl!2spl"
+					width="100%"
+					height="100%"
+					style="border: 0"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+				></iframe>
 			</div>
 		</div>
 		<div class="info">
@@ -157,23 +156,12 @@ button:hover {
 	background-color: #2e8b57;
 }
 
-.mapouter {
-	/* position: relative; */
+.map {
 	text-align: right;
 	height: 300px;
 	width: 80vw;
 }
-.gmap_canvas {
-	overflow: hidden;
-	background: none !important;
-	height: 300px;
-	width: 100%;
-}
 
-#gmap_canvas {
-	width: 100%;
-	height: 100%;
-}
 
 .info {
 	display: flex;
@@ -187,6 +175,7 @@ button:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+    margin-bottom: 2rem;
 	width: 200px;
 }
 
@@ -197,7 +186,7 @@ button:hover {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	margin-bottom: 3rem;
+	margin-bottom: 1.5rem;
 	background-color: #2e8b57;
 }
 
@@ -223,7 +212,6 @@ button:hover {
 
 	.contact__wrapper {
 		flex-direction: row;
-        /* align-items: none; */
 		padding-bottom: 0;
 	}
 
@@ -259,25 +247,13 @@ button:hover {
 		border: none;
 	}
 
-	.mapouter {
-		text-align: right;
+	.map {
 		height: 472px;
-        /* height: 100%; */
-		min-height: 100%;
+		/* height: 100%; */
+
 		width: 50%;
 		min-width: 250px;
-		max-width: 450px;
-	}
-	.gmap_canvas {
-		overflow: hidden;
-		background: none !important;
-		height: 100%;
-		width: 100%;
-	}
 
-	#gmap_canvas {
-		width: 100%;
-		height: 100%;
 	}
 }
 
