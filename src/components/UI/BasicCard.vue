@@ -109,7 +109,7 @@ export default {
 	border: none;
 	border-radius: 10px;
 	background-color: #fff;
-	transition: background-color 0.4s;
+	transition: background-color 0.4s, color 0.4s;
 	cursor: pointer;
 }
 .card__btn:hover {
@@ -120,7 +120,8 @@ export default {
 	background-color: rgb(0, 221, 118);
 }
 .card:nth-child(2) .card__btn:hover {
-	background-color: #00bb43;
+	background-color: #2e8b57;
+	color: #fff;
 }
 
 @media (min-width: 768px) {

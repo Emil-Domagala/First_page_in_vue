@@ -150,6 +150,8 @@ button {
 	font-size: 1.6rem;
 	color: #fff;
 	background-color: #3cb371;
+	transition: background-color 0.4s;
+	cursor: pointer;
 }
 
 button:hover {
@@ -161,7 +163,6 @@ button:hover {
 	height: 300px;
 	width: 80vw;
 }
-
 
 .info {
 	display: flex;
@@ -175,7 +176,7 @@ button:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-    margin-bottom: 2rem;
+	margin-bottom: 2rem;
 	width: 200px;
 }
 
@@ -197,6 +198,14 @@ button:hover {
 
 .info__text {
 	text-align: center;
+}
+
+.special-link {
+	transition: color 0.4s;
+}
+
+.special-link:hover {
+	color: #fff;
 }
 
 .special-link::before {
@@ -253,7 +262,6 @@ button:hover {
 
 		width: 50%;
 		min-width: 250px;
-
 	}
 }
 
