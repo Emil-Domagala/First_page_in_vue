@@ -1,60 +1,45 @@
 <template>
-	<div class="cards">
-		<div class="card" v-for="mainePageOffer in mainePageOffers">
-			<div class="card-content-wrapper">
-				<p class="card__title">{{ mainePageOffer.title }}</p>
-				<p class="card__price">{{ mainePageOffer.price }}</p>
-				<div class="card__options--wrapper">
-					<div
-						class="card__option"
-						:class="{ 'card__option--disactive': !feature.status }"
-						v-for="feature in mainePageOffer.features"
-					>
-						<font-awesome-icon icon="fa-solid fa-check" v-if="feature.status" />
-						<font-awesome-icon
-							icon="fa-solid fa-minus"
-							v-if="!feature.status"
-						/>
-						<p>{{ feature.content }}</p>
-					</div>
+	<div class="card" :class="{ 'card-special': isSpecial }">
+		<div class="card-content-wrapper">
+			<p class="card__title">{{ title }}</p>
+			<p class="card__price">{{ price }}</p>
+			<div class="card__options--wrapper">
+				<div
+					class="card__option"
+					:class="{ 'card__option--disactive': !feature.status }"
+					v-for="feature in features"
+				>
+					<font-awesome-icon icon="fa-solid fa-check" v-if="feature.status" />
+					<font-awesome-icon icon="fa-solid fa-minus" v-if="!feature.status" />
+					<p>{{ feature.content }}</p>
 				</div>
 			</div>
-			<button :name="mainePageOffer.title" class="card__btn" @click="youChose">
-				Wybierz
-			</button>
 		</div>
+		<button class="card__btn" @click="youChose">Wybierz</button>
 	</div>
 </template>
 
 <script>
 export default {
-	inject: ["mainePageOffers"],
+	props: ["title", "price", "features", "isSpecial"],
 	methods: {
 		youChose() {
-			console.log("You chose: " + event.target.name);
+			console.log("You chose: " + this.title);
 		},
 	},
 };
 </script>
 
 <style scoped>
-.cards {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 3rem;
-	justify-content: center;
-	width: 100%;
-	margin-bottom: 4rem;
-}
 .card {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	min-width: 200px;
-	max-width: 250px;
-	padding: 1.5rem 2rem;
+	min-width: 250px;
+	max-width: 300px;
+	padding: 2rem 3rem;
 	box-shadow: 0 1px 10px 0px #aaa;
 	border-radius: 10px;
 	transition: transform 0.4s;
@@ -109,24 +94,17 @@ export default {
 	border: none;
 	border-radius: 10px;
 	background-color: #fff;
-	transition: background-color 0.4s, color 0.4s;
+	transition: background-color 0.4s;
 	cursor: pointer;
 }
 .card__btn:hover {
 	background-color: #ddd;
 }
 
-.card:nth-child(2) .card__btn {
+.card-special .card__btn {
 	background-color: rgb(0, 221, 118);
 }
-.card:nth-child(2) .card__btn:hover {
-	background-color: #2e8b57;
-	color: #fff;
-}
-
-@media (min-width: 768px) {
-	.cards {
-		flex-wrap: nowrap;
-	}
+.card-special .card__btn:hover {
+	background-color: #00bb43;
 }
 </style>

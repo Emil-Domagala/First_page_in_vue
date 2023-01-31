@@ -1,13 +1,12 @@
 <template>
-	<div class="map">
+<section id="full-offer" class="full-offer">
+	<h2 class="section-title">Pełna oferta</h2>
 
-	</div>
+</section>
 </template>
 
 <style scoped>
-.map {
-	width: 100px;
-	height: 100px;
-	background-color: red;
+.full-offer {
+	margin: 4rem 0 10rem;
 }
 </style>

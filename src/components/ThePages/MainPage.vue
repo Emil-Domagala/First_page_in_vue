@@ -46,7 +46,17 @@
 		<div class="container">
 			<div class="offer-wrapper">
 				<p class="offer__text">Wybierz jedną z naszych wspaniałych ofert!</p>
-				<basic-card> </basic-card>
+				<div class="cards">
+					<basic-card
+						v-for="mainePageOffer in mainePageOffers"
+						:key="mainePageOffer.title"
+						:title="mainePageOffer.title"
+						:price="mainePageOffer.price"
+						:features="mainePageOffer.features"
+						:isSpecial="mainePageOffer.isSpecial"
+					>
+					</basic-card>
+				</div>
 				<p>
 					Sprawdż nasze pozostałe oferty
 					<router-link to="/offer" class="special-link">tutaj.</router-link>
@@ -62,11 +72,14 @@ export default {
 	components: {
 		BasicCard,
 	},
+	inject: ["mainePageOffers"],
+	methods:{
+		// const addingSpecialCard= for()
+	},
 };
 </script>
 
 <style scoped>
-
 /* header */
 .header-img {
 	position: relative;
@@ -185,7 +198,14 @@ export default {
 	margin-bottom: 4rem;
 }
 
-
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3rem;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 3rem;
+}
 
 /* media */
 
@@ -216,6 +236,10 @@ export default {
 	.aboutUs-spacing-img__text h2 {
 		font-size: 3rem;
 		padding: 2.5rem 10vw;
+	}
+
+	.cards {
+		flex-wrap: nowrap;
 	}
 }
 </style>

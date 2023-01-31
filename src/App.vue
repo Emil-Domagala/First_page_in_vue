@@ -33,6 +33,7 @@ export default {
 						feature4: { content: "Opcja poza pakietem", status: false },
 						feature5: { content: "Opcja poza pakietem", status: false },
 					},
+					isSpecial: false,
 				},
 				{
 					title: "Standard",
@@ -44,6 +45,7 @@ export default {
 						feature4: { content: "Opcja poza pakietem", status: false },
 						feature5: { content: "Opcja poza pakietem", status: false },
 					},
+					isSpecial: true,
 				},
 				{
 					title: "Premium",
@@ -55,6 +57,7 @@ export default {
 						feature4: { content: "Opcja w pakiecie", status: true },
 						feature5: { content: "Opcja w pakiecie", status: true },
 					},
+					isSpecial: false,
 				},
 			],
 			allOffers: [
@@ -146,7 +149,6 @@ body {
 	font-family: "Montserrat", sans-serif;
 }
 
-
 section {
 	padding-bottom: 6rem;
 }
@@ -177,16 +179,15 @@ nav {
 	margin-bottom: 2rem;
 }
 
-.special-link{
+.special-link {
 	position: relative;
 	text-decoration: none;
 	color: #000;
 	z-index: 2;
-
 }
 
-.special-link::before{
-	content: '';
+.special-link::before {
+	content: "";
 	position: absolute;
 	bottom: -4px;
 	left: -2px;
@@ -197,8 +198,8 @@ nav {
 	z-index: -1;
 }
 
-.special-link:hover::before{
-height: calc(100% + 8px);
+.special-link:hover::before {
+	height: calc(100% + 8px);
 }
 
 .container {
