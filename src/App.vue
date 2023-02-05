@@ -33,7 +33,7 @@ export default {
 						feature4: { content: "Opcja poza pakietem", status: false },
 						feature5: { content: "Opcja poza pakietem", status: false },
 					},
-					isSpecial: false,
+
 				},
 				{
 					title: "Standard",
@@ -45,7 +45,7 @@ export default {
 						feature4: { content: "Opcja poza pakietem", status: false },
 						feature5: { content: "Opcja poza pakietem", status: false },
 					},
-					isSpecial: true,
+
 				},
 				{
 					title: "Premium",
@@ -57,7 +57,7 @@ export default {
 						feature4: { content: "Opcja w pakiecie", status: true },
 						feature5: { content: "Opcja w pakiecie", status: true },
 					},
-					isSpecial: false,
+
 				},
 			],
 			allOffers: [
@@ -122,6 +122,7 @@ export default {
 	provide() {
 		return {
 			mainePageOffers: this.mainePageOffers,
+			allOffers: this.allOffers
 		};
 	},
 };

@@ -53,7 +53,7 @@
 						:title="mainePageOffer.title"
 						:price="mainePageOffer.price"
 						:features="mainePageOffer.features"
-						:isSpecial="mainePageOffer.isSpecial"
+
 					>
 					</basic-card>
 				</div>

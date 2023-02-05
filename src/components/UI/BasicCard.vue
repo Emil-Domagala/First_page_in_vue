@@ -1,5 +1,5 @@
 <template>
-	<div class="card" :class="{ 'card-special': isSpecial }">
+	<div class="card" :class="{ 'card-special': title === 'Standard' }">
 		<div class="card-content-wrapper">
 			<p class="card__title">{{ title }}</p>
 			<p class="card__price">{{ price }}</p>
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-	props: ["title", "price", "features", "isSpecial"],
+	props: ["title", "price", "features"],
 	methods: {
 		youChose() {
 			console.log("You chose: " + this.title);
