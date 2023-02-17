@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import TheLogoNav from "./TheLogo/TheLogoNav.vue";
-import TheBurgerMenu from "./TheMenu/TheBurgerMenu.vue";
-import TheDeskopMenu from "./TheMenu/TheDeskopMenu.vue";
-import TheSlideMenu from "./TheMenu/TheSlideMenu.vue";
+import TheLogoNav from "./logo/logo-nav.vue";
+import TheBurgerMenu from "./menu/burger-menu.vue";
+import TheDeskopMenu from "./menu/deskop-menu.vue";
+import TheSlideMenu from "./menu/slide-menu.vue";
 export default {
 	components: {
 		TheBurgerMenu,

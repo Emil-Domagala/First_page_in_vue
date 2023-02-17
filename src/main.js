@@ -14,10 +14,9 @@ library.add(fas);
 
 //pages
 
-
-import ContactPage from "./components/ThePages/ContactPage.vue";
-import MainPage from "./components/ThePages/MainPage.vue";
-import OfferPage from "./components/ThePages/OfferPage.vue";
+import ContactPage from "./components/pages/contact-page.vue";
+import MainPage from "./components/pages/main-page.vue";
+import OfferPage from "./components/pages/offer-page.vue";
 
 // router
 

@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import TheNav from "./components/TheNav/TheNav.vue";
-import TheFooter from "./components/TheFooter/TheFooter.vue";
+import TheNav from "./components/nav/nav.vue";
+import TheFooter from "./components/footer/footer.vue";
 
 export default {
 	components: {
@@ -33,7 +33,6 @@ export default {
 						feature4: { content: "Opcja poza pakietem", status: false },
 						feature5: { content: "Opcja poza pakietem", status: false },
 					},
-
 				},
 				{
 					title: "Standard",
@@ -45,7 +44,6 @@ export default {
 						feature4: { content: "Opcja poza pakietem", status: false },
 						feature5: { content: "Opcja poza pakietem", status: false },
 					},
-
 				},
 				{
 					title: "Premium",
@@ -57,7 +55,6 @@ export default {
 						feature4: { content: "Opcja w pakiecie", status: true },
 						feature5: { content: "Opcja w pakiecie", status: true },
 					},
-
 				},
 			],
 			allOffers: [
@@ -122,7 +119,7 @@ export default {
 	provide() {
 		return {
 			mainePageOffers: this.mainePageOffers,
-			allOffers: this.allOffers
+			allOffers: this.allOffers,
 		};
 	},
 };

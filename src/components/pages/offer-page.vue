@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import BasicCard from "../UI/BasicCard.vue";
+import BasicCard from "../UI/basic-card.vue";
 export default {
 	components: {
 		BasicCard,
