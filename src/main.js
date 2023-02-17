@@ -14,7 +14,7 @@ library.add(fas);
 
 //pages
 
-import AboutUsPage from "./components/ThePages/AboutUsPage.vue";
+
 import ContactPage from "./components/ThePages/ContactPage.vue";
 import MainPage from "./components/ThePages/MainPage.vue";
 import OfferPage from "./components/ThePages/OfferPage.vue";
@@ -37,11 +37,6 @@ const router = createRouter({
 			name: "contact",
 			path: "/contact",
 			component: ContactPage,
-		},
-		{
-			name: "aboutUs",
-			path: "/aboutUs",
-			component: AboutUsPage,
 		},
 		{
 			name: "offer",
