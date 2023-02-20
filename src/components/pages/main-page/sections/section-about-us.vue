@@ -5,7 +5,7 @@
       <div class="aboutUs-wrapper">
         <img
           class="aboutUs-wrapper__img"
-          src="../../../assets/aboutUs.jpg"
+          src="../../../../assets/aboutUs.jpg"
           alt="Mała skalna wysepka z jednym krzaczkiem otoczona wodą z jeziora"
         />
         <div class="aboutUs-wrapper__text">
@@ -23,7 +23,6 @@
       </div>
     </div>
     <div class="aboutUs-spacing-img">
-      <div class="aboutUs-spacing-img__shadow"></div>
       <div class="aboutUs-spacing-img__text">
         <h2>Przygoda dla całej rodziny</h2>
       </div>
@@ -56,12 +55,13 @@
   width: 100vw;
   min-height: 210px;
   height: 25vh;
-  background-image: url('../../../assets/aboutUs_spacing_small.jpg');
+  background-image: url('../../../../assets/aboutUs_spacing_small.jpg');
   background-size: cover;
   background-position: 50% 50%;
   z-index: 1;
 }
-.aboutUs-spacing-img__shadow {
+.aboutUs-spacing-img::after {
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;
@@ -110,7 +110,7 @@
     margin-bottom: 0rem;
   }
   .aboutUs-spacing-img {
-    background-image: url(../../../assets/aboutUs_spacing_big.jpg);
+    background-image: url(../../../../assets/aboutUs_spacing_big.jpg);
   }
   .aboutUs-spacing-img__text h2 {
     font-size: 3rem;

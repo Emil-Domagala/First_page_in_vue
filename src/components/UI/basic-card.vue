@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :class="{ 'card-special': title === 'Standard' }">
+  <div class="card">
     <div class="card-content-wrapper">
       <p class="card__title">{{ title }}</p>
       <p class="card__price">${{ price }}</p>
@@ -15,7 +15,9 @@
         </div>
       </div>
     </div>
-    <basic-card-btn @picked-offer-emited="consoleLogPickedOffer"
+    <basic-card-btn
+      @picked-offer-emited="consoleLogPickedOffer"
+      :isVariable="variableBtn"
       >Wybierz!</basic-card-btn
     >
   </div>
@@ -36,6 +38,13 @@ export default {
   methods: {
     consoleLogPickedOffer() {
       console.log('You chosed: ' + this.title);
+    },
+  },
+  computed: {
+    variableBtn() {
+      if (this.title === 'Standard') {
+        return 'btn-special';
+      }
     },
   },
 };

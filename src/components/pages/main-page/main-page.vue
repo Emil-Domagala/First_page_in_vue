@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import SectionHeader from './main-page-sections/section-header.vue';
-import SectionAboutUs from './main-page-sections/section-about-us.vue';
-import SectionOffer from './main-page-sections/section-offer.vue';
+import SectionHeader from './sections/section-header.vue';
+import SectionAboutUs from './sections/section-about-us.vue';
+import SectionOffer from './sections/section-offer.vue';
 
 export default {
   components: {

@@ -1,9 +1,12 @@
 <template>
-  <button class="card__btn" @click="pickedOffer"><slot></slot></button>
+  <button class="btn" :class='isVariable' @click="pickedOffer"><slot></slot></button>
 </template>
 
 <script>
 export default {
+    props:{
+        isVariable: String
+    },
   methods: {
     pickedOffer() {
      this.$emit('pickedOfferEmited')
@@ -13,7 +16,7 @@ export default {
 </script>
 
 <style scoped>
-.card__btn {
+.btn {
   bottom: 0;
   justify-self: flex-end;
   font-size: 1.4rem;
@@ -25,14 +28,14 @@ export default {
   transition: background-color 0.4s;
   cursor: pointer;
 }
-.card__btn:hover {
+.btn:hover {
   background-color: #ddd;
 }
 
-.card-special .card__btn {
+.btn-special {
   background-color: rgb(0, 221, 118);
 }
-.card-special .card__btn:hover {
+.btn-special:hover {
   background-color: #00bb43;
 }
 </style>

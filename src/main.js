@@ -15,7 +15,7 @@ library.add(fas);
 //pages
 
 import ContactPage from './components/pages/contact-page.vue';
-import MainPage from './components/pages/main-page.vue';
+import MainPage from './components/pages/main-page/main-page.vue';
 import OfferPage from './components/pages/offer-page.vue';
 
 // router

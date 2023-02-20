@@ -1,7 +1,6 @@
 <template>
   <section id="header">
     <div class="header-img">
-      <div class="header-img__shadow"></div>
       <div class="header-img__text">
         <div class="container">
           <p>Forest Group</p>
@@ -18,12 +17,13 @@
   width: 100vw;
   height: 330px;
   max-height: calc(100vh - 79px);
-  background-image: url('../../../assets/header_small.jpg');
+  background-image: url('../../../../assets/header_small.jpg');
   background-size: cover;
   background-position: 50% 70%;
   z-index: 1;
 }
-.header-img__shadow {
+.header-img::after {
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;
@@ -57,7 +57,7 @@
 
 @media (min-width: 768px) {
   .header-img {
-    background-image: url('../../../assets/header_big.jpg');
+    background-image: url('../../../../assets/header_big.jpg');
   }
 }
 </style>

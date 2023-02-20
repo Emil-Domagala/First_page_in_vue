@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import basicCard from '../../UI/basic-card.vue';
-import basicLink from '../../UI/basic-link.vue';
+import basicCard from '../../../UI/basic-card.vue';
+import basicLink from '../../../UI/basic-link.vue';
 export default {
   components: {
     basicCard,
