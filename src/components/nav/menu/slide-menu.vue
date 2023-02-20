@@ -19,7 +19,9 @@
 
 <script>
 export default {
-  props: ['showMenuClass'],
+  props: {
+    showMenuClass: String,
+  },
 };
 </script>
 
